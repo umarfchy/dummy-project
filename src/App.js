@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 
 function App() {
   return (
@@ -7,6 +7,7 @@ function App() {
         <p>
           <h2>Welcome!</h2>
           <h2>This application is up and running.(dev)</h2>
+          <p>Reflect Changes</p>
         </p>
       </header>
     </div>
