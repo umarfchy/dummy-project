@@ -8,14 +8,13 @@ WORKDIR /app
 
 # Copying package.json and yarn.lock and installing node modules
 # This helps caching the modules
-COPY package.json .
-COPY yarn.lock .
-RUN yarn install
+COPY package*.json ./
+RUN npm install
 
 # Copying rest of the file in image's working directory
 COPY . .
 # Building the assets
-RUN yarn build
+RUN npm run build
 
 # STAGE 2: Using nginx to serve the built assets
 # Using nginx as a starting point 
